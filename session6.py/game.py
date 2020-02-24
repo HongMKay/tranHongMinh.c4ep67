@@ -27,3 +27,8 @@ while True:
             score = 0
 
 print('')
+
+#nộp bài
+#git add .
+#git commit -m "tên file"
+#git push origin master
