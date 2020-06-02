@@ -11,30 +11,35 @@ customer_collection = db["customer"]
 
 # #cách thêm dữ liệu
 new_data = []
-for i in range(100):
+for i in range(150):
     data = {
         "name": fake.name(),
-        "age": fake.job(),
+        "job": fake.job(),
         "address": fake.address(),
         "phone": fake.phone_number()
     }
     new_data.append(data)
 
+
+
 #thêm nhiều dữ liệu
-customer_collection.insert_many(new_data) # kiểu dữ liệu bên ngoài là list, bên trong là dict
+customer_collection.insert_many(new_data) 
+# # kiểu dữ liệu bên ngoài là list, bên trong là dict
 
 
 #thêm 1 dữ liệu
-# customer_collection.insert_one({
-#     "name": "Min",
-#     "age": 50,
-#     "address": "dong da"
-# })
+customer_collection.insert_one({
+    "name": "Min",
+    "age": 50,
+    "address": "dong da"
+})
 # # với lệnh này thì phải là 1 dict
 
-#cách lấy dữ liệu
-#READ DATA
+# cách lấy dữ liệu
+# READ DATA
 data = customer_collection.find({"age": {"$lt": "18"}})
+for i in data:
+    print(i)
 data1 = customer_collection.find_one({"_id": ObjectId('5e5520c3aeeca6941555bb7f')})
 print(data1)
 #tìm dữ liệu ghi cả key lẫn value
@@ -47,7 +52,7 @@ print(data1)
 #update data
 customer_collection.update_one(
     {
-        "_id": ObjectId('5e5520c3aeeca6941555bb7f')
+        "_id": ObjectId('5e5520c3aeeca6941555bb7f') #tìm thông tin có id như thế, rồi sau đó mới update
     }, 
     {
         "$set": {
@@ -55,6 +60,7 @@ customer_collection.update_one(
         } #chỉ thay đổi name, các tphan khác giữ nguyên  
     }
 )
+
 #sẽ có nhiều keyword khác ngoài $set để thực hiện lệnh update
 
 #delete

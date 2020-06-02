@@ -1,4 +1,5 @@
 from random import *
+from inside import is_inside
 
 shapes = [
     {
@@ -29,39 +30,29 @@ def get_shapes():
 
 
 def generate_quiz():
-    text = shapes[randint(0,3)]["text"]
-    color = shapes[randint(0,3)]["color"]
-    quiz_type = randint(0, 1) # 0 : meaning, 1: color   
-    a =(text, color, quiz_type)
-    return a
-
-def is_inside(content1, content2 = [140, 60, 100, 200]):
-    if content1[0] in range(140,241):
-    # if content1[0] > 140 and content1[0] < 240:
-        if content1[1] in range(60,261):
-            result = True
-        else:
-            result = False
-    else:
-        result = False
-    return result
+    meaning = choice(get_shapes())["text"]
+    color = choice(get_shapes())["color"]
+    return [
+        meaning,
+        color,
+        randint(0,1) #0:meaning, 1:color
+    ]
 
 def mouse_press(x, y, text, color, quiz_type):
-    # for i in range(len(shapes)):
-        # inside = is_inside([x,y], shapes[i]["rect"])
-        # if inside == True:
-        #     choosen_text = shapes[i]["text"]
-        #     choosen_color = shapes[i]["color"]
-        # else:
-        #     pass
-    for i in range(len(shapes)):
-        a = shapes[i]
-        if is_inside([x,y], a["rect"]) == True:
-            if a["text"] == shapes[randint(0,3)]["text"]:
-                return True
-            else:
-                return False
-        else:
-            return False
+    shapes = get_shapes()
+    for shape in shapes:
+        if is_inside([x,y], shape['rect']):
+            if quiz_type ==0:
+                if text == shape['text']:
+                    return True
+                else:
+                    return False
+            elif quiz_type ==1:
+                if color == shape['color']:
+                    return True
+                else:
+                    return False
+    
+    
 
 

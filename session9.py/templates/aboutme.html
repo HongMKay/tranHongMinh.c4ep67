@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About Me</title>
+        <link href="aboutme.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>About me</header>
+        <h1>Hong Minh Tran</h1>
+        <h2>Profolio</h2>
+        <p>Schools:
+        <ul>
+            <li><p><em>High School:</em></p><span>ABC School</span></li>
+            <li><p><em>University:</em></p><span>XYZ School</span></li>
+        </ul>
+
+        <table>
+            <tr>
+                <td>
+                    Name:
+                </td>
+                <td>
+                    {{ user.username }}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    DOB:
+                </td>
+                <td>
+                    {{ user.dob }}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Gender:
+                </td>
+                <td>
+                    {{ user.gender }}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Address:
+                </td>
+                <td>
+                    {{ user.address }}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Nickname:
+                </td>
+                <td>
+                    {{ user.nickname }}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src = "C:\Users\tranh\OneDrive\Desktop\aboutme\image.jpg" alt = "Image not found">
+                </td>
+                <td>
+                    <img src = "C:\Users\tranh\OneDrive\Desktop\aboutme\image.jpg" alt = "Image not found">
+                </td>
+            </tr>
+    
+        </table>
+    </body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href= "{{ url_for('static', filename='css/save_amazon.css') }}">
+    <link rel="shortcut icon" type="image/x-icon" href="https://i.imgur.com/TQkEz25.png" />
+    <title>Save Amazon</title>
+</head>
+<body>
+    <!-- Navbar Component -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" style="position: fixed; z-index: 4; width: 100%;">
+    <a class="navbar-brand" href="/"><img src = "https://lh3.googleusercontent.com/6VtfzsuxnfV0CKJL9fWHROtGH8rbe4ax5Sc_haG4XAw2hki7722uXrjw6dC3j63reB1o=s93" alt = "logo"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/animals">Animals in Amazon</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/plants">Plants in Amazon</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Save Amazon<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+           <a class="nav-link" href="/our_team">We are Xmazon!</a>
+        </li>
+      </ul>
+
+    </div>
+</nav>
+  <!-- End of navbar component -->
+  <!-- section jumbotron  -->
+<div class="container" style="position: relative; top: 120px;">
+  <!-- Row with jumbotron component -->
+  <div class="row">
+    <div class="col">
+      <div class="jumbotron p-4 bg-success text-center">
+        <h1 class="text-white font-weight-bold text-center">The Amazon needs your help!</h1>
+        <hr class="bg-white">
+        <h5 class="text-white font-weight-bold text-center">We can’t protect the Amazon alone. 
+          We need the support of individuals like you who care about protecting the planet by saving the largest forest we have left. </h5>
+      </div>
+    </div>
+  </div>
+      <!-- Row 1 with cards -->
+      <div class="row">
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-header text-success font-weight-bold text-center">
+              The Rainforest Foundation works on-the-ground to secure land rights for indigenous people. We strengthen indigenous land security and train indigenous communities to use technology to protect their forests.
+            </div>
+            <img class="card-img-top" src="https://realwood.org/images/2.png" alt="Rainforest Foundation">
+            <div class="card-body">
+              <hr>
+              <p class=" card-text text-center">
+                <a href="https://rainforestfoundation.org/" target = #><strong>Rainforest Foundation</strong></a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-header text-success font-weight-bold text-center">
+              Amazon Watch partners with indigenous and environmental organizations in campaigns for human rights, corporates accountability and the preservation of the Amazon's ecological systems.
+            </div>
+            <br>
+            <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTr6uCvfk0NYrSjrKkFSHgdauHkpCgYVsO_gVYOY0wdPhD6af3n&usqp=CAU" 
+            alt="Amazon Watch">
+            <div class="card-body">
+              <br><hr>
+              <p class=" card-text text-center">
+                <a href="https://amazonwatch.org/" target=#><strong>Amazon Watch</strong></a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-header text-success font-weight-bold text-center">
+              The Amazon Conservation Team partners with indigenous and other local communities to protect tropical forests and strengthen traditional culture.
+            </div>
+            <img class="card-img-top" src="https://res-4.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_256,w_256,f_auto,q_auto:eco/dohlcmobpzxa9mqwtyuo" 
+            alt="Amazon Conservation Team">
+            <div class="card-body">
+              <hr><br>
+              <p class=" card-text text-center">
+                <a href="https://www.amazonteam.org/" target=#><strong>Amazon Conservation Team</strong></a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <!-- End of row 2 with cards -->
+
+      <!-- Row 1 with cards -->
+      <div class="row">
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-header text-success font-weight-bold text-center">
+              WWF’s work has evolved from saving species and landscapes to addressing the larger global threats and forces that impact them.
+            </div>
+            <img class="card-img-top" src="https://miro.medium.com/fit/c/256/256/2*i4PWRsGJAbhHAwAIwKj2bQ.jpeg" 
+            alt="World Wide Fund">
+            <div class="card-body">
+              <hr><br>
+              <p class=" card-text text-center">
+                <a href="https://www.worldwildlife.org/" target=#><strong>World Wide Fund</strong></a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-header text-success font-weight-bold text-center">
+              Rainforest Trust's vision has remained the same since 1988: to purchase and protect threatened rainforests and save endangered wildlife through community engagement and local partnerships.
+            </div>
+            <img class="card-img-top" src="https://pbs.twimg.com/profile_images/378800000467190922/460529155b055efa773ee0ec2f2040ed.png" 
+            alt="Rainforest Trust">
+            <div class="card-body">
+              <hr>
+              <p class=" card-text text-center">
+                <a href="https://www.rainforesttrust.org/" target = #><strong>Rainforest Trust</strong></a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-header text-success font-weight-bold text-center">
+              Rainforest Action Network preserves forests, protects the climate and upholds human rights by challenging corporate power and systemic injustice through frontline partnerships and strategic campaigns.
+            </div>
+            <br><br><br>
+            <img class="card-img-top" src="https://i.pinimg.com/originals/b1/04/4b/b1044b8054fa80aadd60d9f48cf97793.png" 
+            alt="Rainforest Action Network">
+            <div class="card-body">
+              <p class=" card-text text-center">
+                <a href="https://www.ran.org/" target = #><strong>Rainforest Action Network</strong></a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <!-- End of row 2 with cards -->
+
+      <!-- End of section jumbotron -->
+      <!-- footer -->
+      <div class="row">
+        <div class="col">
+          <div class="jumbotron p-1">
+            <h6 class = "text-center">2020 MINH & LINH C4E67 &copy</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

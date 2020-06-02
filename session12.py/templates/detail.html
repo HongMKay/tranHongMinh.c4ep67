@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail</title>
+    <link rel= "stylesheet" href= "{{ url_for('static', filename='css/detail.css') }}">
+</head>
+<body>
+    <table>
+        <tr>
+            <!-- <td rowspan = "3">
+                <img src="C:\Users\tranh\OneDrive\Desktop\C4E\session12.py\static\kpop_idol.jpg" alt="Kpop Idol" />
+            </td> -->
+            <td><h1>{{ idol.stage_name }}</h1></td>
+        </tr>
+        <tr>
+            <td><h2>{{ idol.kor_name }}</h2></td>
+        </tr>
+        <tr>
+            <td><h2>{{ idol.group }}</h2></td>
+        </tr>
+    </table>
+    
+</body>
+</html>
+   
+    
